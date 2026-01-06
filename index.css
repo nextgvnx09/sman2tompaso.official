@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --navy: #0A0F1E;
+  --gold: #D4AF37;
+  --gold-glow: rgba(212, 175, 55, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #ffffff;
+  color: var(--navy);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Typography Enhancements */
+.text-balance {
+  text-wrap: balance;
+}
+
+.font-mono-intel {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-serif-prestige {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Fluid Typography */
+.h-supreme {
+  font-size: clamp(2.5rem, 12vw, 9rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+/* Tactile Response */
+.tap-feedback {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.tap-feedback:active {
+  transform: scale(0.96);
+  opacity: 0.8;
+}
+
+/* Background Effects */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-gold {
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), 
+              transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f8f9fb; }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+@media (max-width: 768px) {
+  .reveal { transform: translateY(20px); }
+}
+
+.glass-nav-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,20 @@
+{
+  "name": "SMAN 2 Tompaso | Cerdas, Terampil, Bermartabat ",
+  "short_name": "SMAN2Tompaso",
+  "description": "Website Resmi SMA Negeri 2 Tompaso. Pusat informasi PPDB 2026, prestasi siswa, dan transformasi pendidikan digital di Minahasa.",
+  "icons": [
+    {
+      "src": "https://i.ibb.co.com/7dGQkvbZ/20260104-094156.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "theme_color": "#0A0F1E",
+  "background_color": "#0A0F1E",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}
